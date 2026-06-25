@@ -1,0 +1,37 @@
+{
+  "name": "contextslim",
+  "version": "0.1.0",
+  "description": "Scan a project, strip noise, and generate a single optimized Markdown context file for LLMs.",
+  "type": "module",
+  "bin": {
+    "contextslim": "./dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/cli.js",
+    "prepare": "npm run build"
+  },
+  "keywords": [
+    "llm",
+    "context",
+    "claude",
+    "gpt",
+    "ai",
+    "cli",
+    "token-optimization"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^12.1.0",
+    "ignore": "^5.3.1",
+    "chalk": "^5.3.0",
+    "ora": "^8.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
