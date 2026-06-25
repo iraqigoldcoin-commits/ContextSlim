@@ -1,9 +1,11 @@
 import fs from 'fs/promises';
 import path from 'path';
-import ignore from 'ignore';
+import * as ignoreModule from 'ignore';
 import type { Ignore } from 'ignore';
 import { DEFAULT_IGNORE_PATTERNS, LANGUAGE_MAP } from './constants.js';
 import type { SlimOptions, ContextResult, FileEntry } from './types.js';
+
+const ignore = (ignoreModule.default ?? ignoreModule) as unknown as () => Ignore;
 
 export async function buildContext(options: SlimOptions): Promise<ContextResult> {
   const ig = buildIgnoreFilter(options);
