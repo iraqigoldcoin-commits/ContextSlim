@@ -179,7 +179,7 @@ For large codebases, combine with `--max-depth` and `--ignore` to further narrow
 ## Development
 
 ```bash
-git clone https://github.com/your-org/contextslim.git
+git clone https://github.com/iraqigoldcoin-commits/contextslim.git
 cd contextslim
 npm install
 npm run dev -- .        # run against current directory
